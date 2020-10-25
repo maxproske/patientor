@@ -3,7 +3,8 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended" // Always last
     ],
     "plugins": ["@typescript-eslint", "react"],
     "env": {
@@ -18,7 +19,20 @@
       ],
       "@typescript-eslint/no-explicit-any": 1,
       "no-case-declarations": 0,
-      "react/prop-types": 0
+      "react/prop-types": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "bracketSpacing": true,
+          "arrowParens": "always",
+          "printWidth": 80,
+          "semi": true,
+          "trailingComma": "es5",
+          "tabWidth": 2,
+          "useTabs": false
+        }
+      ]
     },
     "settings": {
       "react": {
